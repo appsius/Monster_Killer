@@ -194,9 +194,16 @@ function healPlayerHandler() {
 	endRound();
 }
 
+let i = 0;
 function printLogHandler() {
-	for (let battle of battleLog) {
-		console.log(battle);
+	for (let logEntry of battleLog) {
+		console.log(`#${i}`);
+
+		for (let key in logEntry) {
+			console.log(`${key} => ${logEntry[key]}`);
+		}
+
+		i++;
 	}
 }
 
